@@ -1,0 +1,15 @@
+{
+    "study_name": "bert-NER_num_tokens_final",
+    "base_model":"bertbase-NER",
+    "num_tokenization": true,
+    "search_space_dict" : {
+        "learning-Rate": [1e-5, 2e-5, 5e-5, 1e-4],
+        "batch-size": [8, 16, 32]
+    },
+    "inclusion_variable": "inclusion",
+    "base_path" : "[base_save_path]",
+    "train_path" : "[train_data_path]",
+    "validation_path" : "[validation_data_path]",
+    "universal_args_path" : "[universal_args_path]"
+}
+  

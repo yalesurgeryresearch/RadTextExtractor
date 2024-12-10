@@ -1,0 +1,9 @@
+{
+    "model_path": "[path to model]",
+    "tokenizer_path": "[path to tokenizer]",
+    "save_path": "[where to save results]",
+    "num_tokenization": true, 
+    "inclusion_variable": "inclusion",
+    "inference_path": "[path to inference dataset]",
+    "data_labeled": true
+}

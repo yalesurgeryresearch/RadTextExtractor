@@ -1,0 +1,108 @@
+[
+    {
+        "id": 1,
+        "Narrative": "CTA CHEST W AND\/OR WO IV CONTRAST on X\/XX\/XXXX X:XX AM  INDICATION: Per EMR review: Differing blood pressure in bilateral upper extremities with known history of hypertension. 190\/110 left upper extremity and 156\/90 right upper extremity. \"There is very low suspicion for aortic aneurysm dissection, concern for mechanical obstruction.\"   COMPARISON: No similar prior imaging is available for comparison at this time.  INTERPRETING PHYSICIAN: XXXXXXXXXXX, MD  TRAINEE(S): XXXXXXXXXXXXXXX, MD  TECHNIQUE: Prospectively ECG gated was utilized. CT images of the chest were obtained without IV contrast. CTA images of the chest were obtained after administration of IV contrast, 90 mL Omnipaque 350. Coronal MIP reformats are provided.  FINDINGS: Quality of exam: Good.  Aorta: No aortic aneurysm or dissection. No evidence of coarctation. Aortic branch vessels: Patent with a common origin of the right brachiocephalic and left common carotid artery.   The cross-sectional diameters of the aorta are in mm as follows (prior values in parentheses):  Sinus of Valsalva: 33 x 30 x 30 Sinotubular junction: 35 Mid ascending aorta: 38 Ascending proximal to the brachiocephalic: 35  Top of the aortic arch proximal to left subclavian: 30 Proximal descending distal to left subclavian: 28 Mid descending thoracic aorta: 26 Aorta at the diaphragm: 25  Heart and vessels: The cardiac chambers are visually normal in size. There are no coronary calcifications. There is no pericardial effusion. Pulmonary artery is normal in size. The brachiocephalic, right subclavian, and left subclavian arteries are patent without evidence of stenosis or occlusion. Lungs \/ airways \/ pleura: The central airways are patent. No pleural effusion. Mediastinum \/ lymph nodes: There is a small hiatal hernia. Portions of the esophagus are dilated. No thoracic lymphadenopathy.  Visualized abdomen: Limited evaluation of the upper abdomen is unremarkable. Musculoskeletal system and soft tissue: Sclerosis and deformity of the posterior bilateral ribs at all visualized levels may reflect old healed fractures.  Findings are confirmed on the MIP images. ",
+        "label": [
+          {
+            "start": 1065,
+            "end": 1067,
+            "text": "33",
+            "labels": [
+              "SOV"
+            ]
+          },
+          {
+            "start": 1070,
+            "end": 1072,
+            "text": "30",
+            "labels": [
+              "SOV"
+            ]
+          },
+          {
+            "start": 1075,
+            "end": 1077,
+            "text": "30",
+            "labels": [
+              "SOV"
+            ]
+          },
+          {
+            "start": 1100,
+            "end": 1102,
+            "text": "35",
+            "labels": [
+              "STJ"
+            ]
+          },
+          {
+            "start": 1124,
+            "end": 1126,
+            "text": "38",
+            "labels": [
+              "ASC"
+            ]
+          },
+          {
+            "start": 1170,
+            "end": 1172,
+            "text": "35",
+            "labels": [
+              "PTB"
+            ]
+          },
+          {
+            "start": 1226,
+            "end": 1228,
+            "text": "30",
+            "labels": [
+              "ARC"
+            ]
+          },
+          {
+            "start": 1276,
+            "end": 1278,
+            "text": "28",
+            "labels": [
+              "PDC"
+            ]
+          },
+          {
+            "start": 1310,
+            "end": 1312,
+            "text": "26",
+            "labels": [
+              "DSC"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "Narrative": "CT CHEST WO IV CONTRAST Date: X\/XX\/XXXX X:XX AM  INDICATION: XX-year-old XXXX with history of hepatitis C, cirrhosis, chronic portal vein occlusion and hepatocellular carcinoma status post microwave ablation. Presenting for staging  COMPARISON: XXXXXXXXXX, XXXX CT chest.  TECHNIQUE:  A volumetric CT acquisition of the chest was obtained from the thoracic inlet to the upper abdomen without administration of intravenous contrast. Coronal and sagittal reformatted images were also provided.  FINDINGS:  Lungs\/Airways\/Pleura : New 7 mm left upper lobe perifissural groundglass opacity (X:XXX). Other scattered nodules and ground glass opacities, grossly unchanged. Stable right lower lobe paravertebral\/peri-enthesophyte scarring. The airways are patent. No pleural effusions.  Mediastinum\/Lymph nodes: No thoracic adenopathy by CT criteria. Prominent subcentimeter left internal mammary node, unchanged compared to prior study. Nodular left lobe with macrocalcification. Small hiatal hernia and patulous esophagus.  Heart and Vessels: Redemonstration of cardiomegaly. No pericardial effusion. Stably ectatic ascending aorta measuring up to 3.8 cm. Redemonstrated main pulmonary artery prominence measuring up to 3.2 cm can be a sequela of chronic pulmonary hypertension.] Calcifications within the coronary vessels and mitral valve leaflets are noted.   Upper Abdomen: Cirrhotic liver morphology and atrophy of the left hepatic lobe. Known right hepatic lobe hepatocellular carcinoma is not well characterized in this study. Caudate lobe hypertrophy and splenomegaly are redemonstrated. Multiple upper abdomen varices. Limited assessment of the portal vein due to lack of intravenous contrast.   Osseous structures and Soft Tissues: No aggressive bone lesions. ",
+        "label": [
+          {
+            "start": 1141,
+            "end": 1144,
+            "text": "3.8",
+            "labels": [
+              "ASC"
+            ]
+          }
+        ]
+      },  
+      {
+        "id": 3,
+        "Narrative": "HRCT CHEST CT WITHOUT INTRAVENOUS CONTRAST  CLINICAL INFORMATION: Interstitial lung disease on amiodarone. Status post diuresis with increasing oxygen requirement and slight alteration of mental status. Known history of asthma, COPD., CAD, and atrial fibrillation.  TECHNIQUE: Routine HRCT protocol was applied without IV contrast material. Coronal reformatted images were obtained. No sufficient expiratory images were obtained to assess for air trapping.  Comparison: CT chest dated XX\/X\/XXXX and X\/XX\/XXXX.  FINDINGS:  Lines and tubes: Left-sided dual lead pacer device is noted with leads terminating in the right atrium and ventricle. A right sided internal jugular central venous catheter terminates at the cavoatrial junction.  Heart and Mediastinum: The previously described hypodense right thyroid lobe nodule is partially imaged. There is stable cardiomegaly. Increased conspicuity of the interventricular septum may be compatible with anemia. There is no pericardial effusion. There is extensive coronary artery and aortic calcification. There is aneurysmal dilatation of the descending thoracic aorta measuring up to 3.5 cm (series XXX\/image XXX). The central pulmonary artery is normal in size.  Lymph nodes: There is no axillary, mediastinal or hilar adenopathy.  Lungs\/Airways\/pleura: There is short-term stability in upper lobe predominant extensive centrilobular and paraseptal emphysematous changes with gradual worsening from XXXX. Also noted are peripheral reticular changes in the upper lobe. There has been short-term interval development of middle to lower lobe fibrotic lung changes as evidenced by traction bronchiectasis and peripheral reticulation. There is new superimposed diffuse groundglass opacities in the middle and lower lobes. The central airways are patent. The 2 cm lobulated nodule in the anterobasal segment of the right lower lobe is again noted and unchanged since XX\/XXXX CT, favoring a benign etiology; given its branching pattern, this may represent mucous impaction of the airways. There has been interval development of a right greater than left small pleural effusion.  Upper Abdomen: The visualized unenhanced portions of the upper abdomen is unremarkable with the exception of stable high attenuation of the liver likely secondary to iron deposition from amiodarone therapy. The left sided fat-containing Bochdalek hernia is again noted.  Bones and Soft tissues: There are mild degenerative changes of the thoracic spine. The overlying soft tissues are unremarkable.  ",
+        "label": [
+          {
+            "start": 1129,
+            "end": 1132,
+            "text": "3.5",
+            "labels": [
+              "DSC"
+            ]
+          }
+        ]
+      }
+]

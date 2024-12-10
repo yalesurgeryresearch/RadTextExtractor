@@ -1,0 +1,12 @@
+{
+    "model_path": "[path to model]",
+    "inference_path": "[path to inference dataset]",
+    "prompt_path": "[path to prompt]",
+    "prompt_version": "base_v6",
+    "save_path": "[where to save results]",
+    "inclusion_variable": "inclusion",
+    "data_labeled": true,
+    "few_shot": false, 
+    "few_shot_path": "[path to few shot samples]",
+    "max_seq_length" : 1536
+}
