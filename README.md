@@ -37,7 +37,7 @@ The folder `Data samples` includes:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your_username/aortic_measurements_extraction.git
+   git clone https://github.com/yalesurgeryresearch/CT-Aorta-NLP-LLM.git
    cd aortic_measurements_extraction
    ```
 
@@ -49,17 +49,26 @@ The folder `Data samples` includes:
 ## Usage
 
 ### Preprocessing
-Run the following command to 
+Run the following command to perform preprocessing on radiology report narratives:
+```bash
+cd /path/to/CT-Aorta_NLP-LLM
+python -m Code.preprocess /path/to/radiology_report_narratives.jsonl
+```
 
 ### BERT fine-tuning
+Create a model specific parameter JSON file like the examples provided, including hyperparameter search space.
+Run the following command to fine-tune the model:
+```bash
+cd /path/to/CT-Aorta_NLP-LLM
+python -m Code.BERT.bert_optuna_inference /path/to/model_parameters.json
+```
+
+### BERT inference
+Create an inference parameter JSON file 
 Run the following command to 
 
 ### Llama instruction-tuning
 Run the following command to 
-
-### BERT inference
-Run the following command to 
-
 
 ### Llama inference
 Run the following command to 
@@ -67,7 +76,7 @@ Run the following command to
 ### Evaluating results
 Run the following command to evaluate results:
 ```bash
-cd /path/to/aortic_measurements_extraction
+cd /path/to/CT-Aorta_NLP-LLM
 python -m Code.result_evaluation /path/to/inference_results.jsonl
 ```
 
