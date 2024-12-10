@@ -38,7 +38,7 @@ The folder `Data samples` includes:
 1. Clone the repository:
    ```bash
    git clone https://github.com/yalesurgeryresearch/CT-Aorta-NLP-LLM.git
-   cd aortic_measurements_extraction
+   cd CT-Aorta_NLP-LLM
    ```
 
 2. Install the required dependencies:
