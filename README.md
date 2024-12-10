@@ -38,7 +38,7 @@ The folder `Data samples` includes:
 1. Clone the repository:
    ```bash
    git clone https://github.com/yalesurgeryresearch/CT-Aorta-NLP-LLM.git
-   cd CT-Aorta_NLP-LLM
+   cd /path/to/CT-Aorta_NLP-LLM
    ```
 
 2. Install the required dependencies:
@@ -48,10 +48,18 @@ The folder `Data samples` includes:
 
 ## Usage
 
+### Running the Code
+To run the code, ensure that your current working directory is set to `/path/to/CT-Aorta-NLP-LLM` (the root of the project):
+```bash
+cd /path/to/CT-Aorta-NLP-LLM
+```
+
+#### Why This Is Important
+The project is organized as a Python module, with code residing in subdirectories such as `Code`. Running the code with the `-m` flag (e.g., `python -m Code.result_evaluation`) requires Python to locate the `Code` module relative to the project root. If you are not in the root directory, Python cannot properly resolve the imports, and you may encounter a `ModuleNotFoundError` or similar errors.
+
 ### Preprocessing
 Run the following command to perform preprocessing on radiology report narratives:
 ```bash
-cd /path/to/CT-Aorta_NLP-LLM
 python -m Code.preprocess /path/to/radiology_report_narratives.jsonl
 ```
 
@@ -59,7 +67,6 @@ python -m Code.preprocess /path/to/radiology_report_narratives.jsonl
 Create a model specific parameter JSON file like the examples provided, including hyperparameter search space.
 Run the following command to fine-tune the model:
 ```bash
-cd /path/to/CT-Aorta_NLP-LLM
 python -m Code.BERT.bert_optuna_inference /path/to/model_parameters.json
 ```
 
@@ -76,13 +83,12 @@ Run the following command to
 ### Evaluating results
 Run the following command to evaluate results:
 ```bash
-cd /path/to/CT-Aorta_NLP-LLM
 python -m Code.result_evaluation /path/to/inference_results.jsonl
 ```
 
 ## Citation
 
-If you use this code in your research, please cite our paper:
+If you use this code in your research, please cite our paper \[placeholder\]:
 
 ```perl
 @article{YourPaperCitation,
