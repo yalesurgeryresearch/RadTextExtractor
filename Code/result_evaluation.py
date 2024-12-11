@@ -5,8 +5,12 @@ import os
 import pandas as pd
 
 # Parse command-line arguments
-parser = argparse.ArgumentParser(description="Load inference results from a specified path.")
-parser.add_argument("result_path", type=str, help="Path to the inference result JSONL file")
+parser = argparse.ArgumentParser(
+    description="Load inference results from a specified path."
+)
+parser.add_argument(
+    "result_path", type=str, help="Path to the inference result JSONL file"
+)
 
 args = parser.parse_args()
 
@@ -19,10 +23,7 @@ label_list = []
 for result_dict in result_list:
     true_labels, _ = extract_entities(result_dict["labeled_sentence"])
     predictions, _ = extract_entities(result_dict["prediction"])
-    new_dict = {
-        "labels": true_labels,
-        "predictions": predictions
-    }
+    new_dict = {"labels": true_labels, "predictions": predictions}
     label_list.append(new_dict)
 
 precision, recall, f1 = calculate_metrics(label_list)
@@ -42,10 +43,6 @@ for metric, value in zip(metrics_list, value_list):
 folder_path = os.path.dirname(result_path)
 metrics_path = os.path.join(folder_path, "result_metrics.csv")
 
-save_dict = {
-    "metrics": metrics_list,
-    "values": value_list
-}
+save_dict = {"metrics": metrics_list, "values": value_list}
 save_df = pd.DataFrame(save_dict)
 save_df.to_csv(metrics_path, index=False)
-

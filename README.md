@@ -1,6 +1,6 @@
 # Aortic Measurements Extraction
 
-This repository contains the code used in our manuscript: **"From Unstructured Text to Research-Ready Data: Aortic Measurement Extraction from Radiology Reports Using Instruction-Tuned Large Language Models"**, in which we explored the use of LLMs to extract aortic measurements from Chest CT radiology reports. The project enables reproduction of results and further experimentation.
+This repository contains the code used in our manuscript **"From Unstructured Text to Research-Ready Data: Aortic Measurement Extraction from Radiology Reports Using Instruction-Tuned Large Language Models"**, in which we explored the use of LLMs to extract aortic measurements from Chest CT radiology reports. The project enables reproduction of results and further experimentation.
 
 
 ## Table of Contents

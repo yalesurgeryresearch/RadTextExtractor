@@ -15,8 +15,12 @@ torch.backends.cudnn.benchmark = False
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Parse command-line arguments
-parser = argparse.ArgumentParser(description="Load inference parameters from a specified path.")
-parser.add_argument("param_path", type=str, help="Path to the inference parameters JSON file")
+parser = argparse.ArgumentParser(
+    description="Load inference parameters from a specified path."
+)
+parser.add_argument(
+    "param_path", type=str, help="Path to the inference parameters JSON file"
+)
 
 args = parser.parse_args()
 
@@ -42,30 +46,30 @@ inference_dataset = load_jsonl(inference_path)
 
 # Define the system prompts
 prompt_dict = load_json(prompt_path)
-messages = [
-    {"role": "system", "content": prompt_dict[prompt_version]+"\n"}
-]
+messages = [{"role": "system", "content": prompt_dict[prompt_version] + "\n"}]
 # Add few-shot samples if selected
 if few_shot:
     few_shot_path = param_dict["few_shot_path"]
     few_shot_samples = load_jsonl(few_shot_path)
     for sample in few_shot_samples:
-        messages.append({"role": "user", "content": sample["sentence"]+"\n"})
-        messages.append({"role": "assistant", "content": sample["labeled_sentence"]+"\n"})
+        messages.append({"role": "user", "content": sample["sentence"] + "\n"})
+        messages.append(
+            {"role": "assistant", "content": sample["labeled_sentence"] + "\n"}
+        )
 
 print(f"Model path: {model_path}")
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name = model_path,
-    max_seq_length = max_seq_length,
-    dtype = torch.float16,
-    load_in_4bit = True,
+    model_name=model_path,
+    max_seq_length=max_seq_length,
+    dtype=torch.float16,
+    load_in_4bit=True,
 )
 
 # Set the model to evaluation mode, ensure deterministic generation
 model.eval()
-model.generation_config.temperature=None
-model.generation_config.top_p=None
-model.generation_config.do_sample=False
+model.generation_config.temperature = None
+model.generation_config.top_p = None
+model.generation_config.do_sample = False
 FastLanguageModel.for_inference(model)
 tokenizer.pad_token_id = tokenizer.eos_token_id
 
@@ -73,32 +77,32 @@ tokenizer.pad_token_id = tokenizer.eos_token_id
 formatted_inputs = []
 for sample in inference_dataset:
     curr_input = messages + [{"role": "user", "content": sample["sentence"] + "\n"}]
-    formatted_input = tokenizer(tokenizer.apply_chat_template(curr_input, tokenize=False), return_tensors="pt").to(device)
+    formatted_input = tokenizer(
+        tokenizer.apply_chat_template(curr_input, tokenize=False), return_tensors="pt"
+    ).to(device)
     formatted_input["labeled_sentence"] = sample["labeled_sentence"]
     formatted_inputs.append(formatted_input)
 
-    
+
 result_list = []
 for sample in tqdm(inference_dataset):
     if sample[inc]:
         curr_input = messages + [{"role": "user", "content": sample["sentence"] + "\n"}]
-        formatted_input = tokenizer(tokenizer.apply_chat_template(curr_input, tokenize=False), return_tensors="pt").to(device)
+        formatted_input = tokenizer(
+            tokenizer.apply_chat_template(curr_input, tokenize=False),
+            return_tensors="pt",
+        ).to(device)
 
         # Generate the output using the model
         output_ids = model.generate(
-            **formatted_input,
-            max_new_tokens=512,
-            use_cache=True
+            **formatted_input, max_new_tokens=512, use_cache=True
         )
         # Extract the generated tokens (excluding the input prompt)
-        generated_ids = output_ids[0, formatted_input["input_ids"].shape[-1]:]
+        generated_ids = output_ids[0, formatted_input["input_ids"].shape[-1] :]
         # Decode the generated output
         generated_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
 
-        res_dict = {
-            "sentence": sample["sentence"],
-            "prediction": generated_text
-        }
+        res_dict = {"sentence": sample["sentence"], "prediction": generated_text}
         if data_labeled:
             res_dict["labeled_sentence"] = sample["labeled_sentence"]
         result_list.append(res_dict)
