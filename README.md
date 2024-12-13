@@ -13,11 +13,12 @@ This repository contains the code used in our manuscript **"From Unstructured Te
 ## Overview
 
 The folder `Code` containts the python code for the following:
-- Preprocessing label-studio formatted labeled radiology report narratives
-- Fine-tuning BERT-based models for aortic measurement extraction
-- Instruction-tuning Llama models for aortic measurement extraction
-- Performing inference for both Llama and BERT-based models
-- Evaluating performance of model's inference 
+- Preprocessing label-studio formatted labeled radiology report narratives.
+- Fine-tuning BERT-based models for aortic measurement extraction.
+- Instruction-tuning Llama models for aortic measurement extraction.
+- Performing inference for both Llama and BERT-based models.
+- Evaluating a model's performance based on the inference output.
+- Exploring optuna hyperparameter tuning results.
 
 The folder `Additional resource` includes JOSN parameter files to recreate our analysis.
 For BERT this includes:
@@ -65,27 +66,42 @@ python -m Code.preprocess /path/to/radiology_report_narratives.jsonl
 ```
 
 ### BERT fine-tuning
-Create a model specific parameter JSON file like the examples provided, including hyperparameter search space.
+Create a BERT model parameter JSON file like the examples provided, including hyperparameter search space.
 Run the following command to fine-tune the model:
 ```bash
-python -m Code.BERT.bert_optuna_inference /path/to/model_parameters.json
+python -m Code.BERT.bert_optuna_inference /path/to/bert_model_parameters.json
 ```
 
 ### BERT inference
-Create an inference parameter JSON file 
-Run the following command to 
+Create an inference parameter JSON file, designating a model, tokenizer and inference dataset. 
+Run the following command to perform the inference:
+```bash
+python -m Code.BERT.bert_inference /path/to/bert_inference_parameters.json
+```
 
 ### Llama instruction-tuning
-Run the following command to 
+Create a BERT model parameter JSON file like the examples provided, including hyperparameter search space.
+Run the following command to instruction-tune the model:
+```bash
+python -m Code.Llama.llama_optuna_inference /path/to/llama_model_parameters.json
+```
 
 ### Llama inference
-Run the following command to 
+Create an inference parameter JSON file, designating a model and inference dataset. Note that the use of few-shot examples can be designated through the inference JSON.
+Run the following command to perform the inference:
+```bash
+python -m Code.Llama.llama_inference /path/to/llama_inference_parameters.json
+```
 
 ### Evaluating results
-Run the following command to evaluate results:
+BERT and Llama inferences generate results in the same format and so the performance evaluation is shared.
+Run the following command to evaluate the model performance based on the inference output:
 ```bash
 python -m Code.result_evaluation /path/to/inference_results.jsonl
 ```
+
+### Exploring hyperparameter tuning results
+`study_explorer.py` can be used to select the optimal model based on hyperparameter tuning results. Note that Llama based models are ranked based on validation loss rather than macro-F1 since `SFTTrainer` does not support custom evaluation functions. To use `study_explorer.py` add the study path and run it. 
 
 ## Citation
 
