@@ -39,8 +39,8 @@ The folder `Data samples` includes:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yalesurgeryresearch/CT-Aorta-NLP-LLM.git
-   cd /path/to/CT-Aorta_NLP-LLM
+   git clone https://github.com/yalesurgeryresearch/RadTextExtractor.git
+   cd /path/to/RadTextExtractor
    ```
 
 2. Install the required dependencies:
@@ -51,9 +51,9 @@ The folder `Data samples` includes:
 ## Usage
 
 ### Running the Code
-To run the code, ensure that your current working directory is set to `/path/to/CT-Aorta-NLP-LLM` (the root of the project):
+To run the code, ensure that your current working directory is set to `/path/to/RadTextExtractor` (the root of the project):
 ```bash
-cd /path/to/CT-Aorta-NLP-LLM
+cd /path/to/RadTextExtractor
 ```
 
 #### Why This Is Important
