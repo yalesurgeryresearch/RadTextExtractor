@@ -44,6 +44,7 @@ models = {
     "bertbase": "bert-base-uncased",
     "pubmedbert": "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
     "bertbase-NER": "dslim/bert-base-NER",
+    'clinicalbert': 'medicalai/ClinicalBERT',
 }
 base_model = models[model_name]
 
